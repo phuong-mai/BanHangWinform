@@ -352,7 +352,8 @@ namespace QUANLYBANHANG
             // 
             // panel32
             // 
-            this.panel32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel32.Controls.Add(this.textBox19);
@@ -385,6 +386,8 @@ namespace QUANLYBANHANG
             // 
             // panel30
             // 
+            this.panel30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel30.Controls.Add(this.dataGridView3);
             this.panel30.Location = new System.Drawing.Point(4, 100);
             this.panel30.Name = "panel30";
@@ -2772,7 +2775,7 @@ namespace QUANLYBANHANG
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 40);
             this.button5.TabIndex = 19;
-            this.button5.Text = "Tìm kiếm sđt";
+            this.button5.Text = "Tìm kiếm ";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // button6
