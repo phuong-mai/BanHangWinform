@@ -26,7 +26,7 @@ namespace QUANLYBANHANG.DAL
                     invoice.shipper_ID = Convert.ToInt32(reader.GetString(3));
                     invoice.total_money = reader.GetString(4);
                     invoice.customer_address = reader["customer_address"].ToString();
-                    invoices.ship_date = Convert.ToDateTime(reader["ship_date"].ToString());
+                    invoice.ship_date = Convert.ToDateTime(reader["ship_date"].ToString());
                     invoices.Add(invoice);
                 }
                 reader.NextResult();
