@@ -9,15 +9,16 @@ namespace QUANLYBANHANG.Model
 {
     class Customer
     {
-        public int employee_ID { get; set; }
+        public int ID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
+        public string phoneNumber { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string gender { get; set; }
-        public Date birthday { get; set; }
+        public DateTime birthDate { get; set; }
         public string address { get; set; }
-        public Date join_date { get; set; }
-        public int role_ID { get; set; }
+        public DateTime joinDate { get; set; }
+        public int isNew { get; set; }
     }
 }
