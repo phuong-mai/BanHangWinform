@@ -73,7 +73,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CustomerBLL.cs" />
     <Compile Include="ConnectDB.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,9 +128,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

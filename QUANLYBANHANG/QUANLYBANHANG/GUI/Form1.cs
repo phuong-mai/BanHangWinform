@@ -6,18 +6,24 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QUANLYBANHANG.BLL;
 using System.Windows.Forms;
+using QUANLYBANHANG.Model;
 
 
 namespace QUANLYBANHANG
 {
     public partial class Form1 : Form
     {
+        private static CustomerBLL cus = new CustomerBLL();
         public Form1()
         {
             InitializeComponent();
+            tblCustomer.DataSource = cus.GetAll();
+            btnEditCus.Visible = false;
+            btnDeleteCus.Visible = false;
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             //this.Close();
@@ -193,6 +199,54 @@ namespace QUANLYBANHANG
         private void label50_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnShowCus_Click(object sender, EventArgs e)
+        {
+            tblCustomer.DataSource = cus.GetAll();
+        }
+
+        private void btnEditCus_Click(object sender, EventArgs e)
+        {
+            String[] name = tbNameCus.Text.Split(' ');
+            Customer customer = new Customer();
+            for (int i=0; i<name.Length-1; i++)
+            {
+                if (i != name.Length -2)
+                {
+                    name[i] = name[i] + ' ';
+                }
+                customer.firstName += name[i];
+            }
+            customer.lastName = name[name.Length - 1];
+            customer.ID = Convert.ToInt32(tbIDCus.Text);
+            customer.gender = tbGenderCus.Text;
+            customer.address = tbAdressCus.Text;
+            customer.birthDate = Convert.ToDateTime(tbBirthCus.Text);
+            Console.WriteLine(customer.firstName);
+            CustomerBLL.UpdateCus(customer);
+            tblCustomer.DataSource = cus.GetAll();
+        }
+
+        private void tblCustomer_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow row = tblCustomer.Rows[e.RowIndex];
+            Customer customer = cus.GetCusByID(row.Cells["id_cus"].Value.ToString());
+            tbNameCus.Text = customer.firstName + ' ' + customer.lastName;
+            tbIDCus.Text = customer.ID.ToString();
+            tbUsernameCus.Text = customer.username.ToString();
+            tbBirthCus.Text = customer.birthDate.ToString();
+            tbGenderCus.Text = customer.gender.ToString();
+            tbAdressCus.Text = customer.address.ToString();
+            tbJoinDateCus.Text = customer.joinDate.ToString();
+            btnEditCus.Visible = true;
+            btnDeleteCus.Visible = true;
+        }
+
+        private void btnDeleteCus_Click(object sender, EventArgs e)
+        {
+            CustomerBLL.DeleteCus(tbIDCus.Text);
+            tblCustomer.DataSource = cus.GetAll();
         }
     }
 }
