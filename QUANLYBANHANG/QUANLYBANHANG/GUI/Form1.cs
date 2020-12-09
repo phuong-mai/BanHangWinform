@@ -9,26 +9,27 @@ using System.Threading.Tasks;
 using QUANLYBANHANG.BLL;
 using System.Windows.Forms;
 using QUANLYBANHANG.Model;
-
+using QUANLYBANHANG.GUI;
 
 namespace QUANLYBANHANG
 {
     public partial class Form1 : Form
     {
         private static CustomerBLL cus = new CustomerBLL();
+        private static ProductBLL pro = new ProductBLL();
         public Form1()
         {
             InitializeComponent();
             tblCustomer.DataSource = cus.GetAll();
+            tblProduct.DataSource = pro.GetAll();
             btnEditCus.Visible = false;
             btnDeleteCus.Visible = false;
+            btnDeletePro.Visible = false;
         }
-        
         private void button1_Click(object sender, EventArgs e)
         {
             //this.Close();
-            Form2 f2 = new Form2();
-            f2.Show();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -105,8 +106,11 @@ namespace QUANLYBANHANG
         {
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnShowPro_Click(object sender, EventArgs e)
+        {
+            tblProduct.DataSource = pro.GetAll();
+        }
+        private void tblProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -242,11 +246,70 @@ namespace QUANLYBANHANG
             btnEditCus.Visible = true;
             btnDeleteCus.Visible = true;
         }
-
         private void btnDeleteCus_Click(object sender, EventArgs e)
         {
             CustomerBLL.DeleteCus(tbIDCus.Text);
             tblCustomer.DataSource = cus.GetAll();
+        }
+        private void tblProduct_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow row = tblProduct.Rows[e.RowIndex];
+            Product product = pro.GetProByID(row.Cells["id_pro"].Value.ToString());
+            tbNamePro.Text = product.product_name;
+            tbIDPro.Text = product.product_ID.ToString();
+            tbCatalogNamePro.Text = product.catalog_ID.ToString();
+            tbPricePro.Text = product.price.ToString();
+            tbAmountPro.Text = product.amount.ToString();
+            tbDetailPro.Text = product.product_detail.ToString();
+            tbURL.Text = product.img.ToString();
+            btnEditPro.Visible = true;
+            btnDeletePro.Visible = true;
+        }
+        private void tblCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void tbPricePro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label52_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label53_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tblProduct_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnDeletePro_Click(object sender, EventArgs e)
+        {
+            ProductBLL.DeletePro(tbIDPro.Text);
+            tblProduct.DataSource = pro.GetAll();
+        }
+
+        private void btnAddCus_Click(object sender, EventArgs e)
+        {
+            FromAddCus fcus = new FromAddCus();
+            fcus.Show();
+        }
+
+        private void btnAddPro_Click(object sender, EventArgs e)
+        {
+            FromAddPro fpro = new FromAddPro();
+            fpro.Show();
         }
     }
 }
