@@ -28,5 +28,9 @@ namespace QUANLYBANHANG.BLL
         {
             obj.DeleteCus(ID);
         }
+        public static void AddCus(Customer customer)
+        {
+            obj.AddCus(customer);
+        }
     }
 }

@@ -24,5 +24,18 @@ namespace QUANLYBANHANG.BLL
         {
             obj.DeletePro(ID);
         }
+        public static void UpdatePro(Product product)
+        {
+            obj.UpdatePro(product);
+        }
+        public static void AddPro(Product product)
+        {
+            obj.AddPro(product);
+        }
+        public DataTable LoadCatalog()
+        {
+            return obj.LoadCatalog();
+        }
+
     }
 }
