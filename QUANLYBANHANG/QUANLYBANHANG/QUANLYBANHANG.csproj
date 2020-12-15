@@ -73,13 +73,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CatalogBLL.cs" />
+    <Compile Include="BLL\ComboBLL.cs" />
     <Compile Include="BLL\CustomerBLL.cs" />
+<<<<<<< HEAD
+    <Compile Include="BLL\EmployeeBLL.cs" />
+=======
     <Compile Include="BLL\InvoiceBLL.cs" />
+>>>>>>> master
     <Compile Include="BLL\ProductBLL.cs" />
     <Compile Include="ConnectDB.cs" />
+    <Compile Include="DAL\CatalogDAL.cs" />
+    <Compile Include="DAL\ComboDAL.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
+<<<<<<< HEAD
+    <Compile Include="DAL\EmployeeDAL.cs" />
+=======
     <Compile Include="DAL\InvoiceDAL.cs" />
+>>>>>>> master
     <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="GUI\AddEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddEmp.Designer.cs">
+      <DependentUpon>AddEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AddPro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +116,12 @@
     <Compile Include="GUI\AddCus.Designer.cs">
       <DependentUpon>AddCus.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\AddCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddCatalog.Designer.cs">
+      <DependentUpon>AddCatalog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Catalog.cs" />
     <Compile Include="Model\Combo.cs" />
     <Compile Include="Model\Customer.cs" />
@@ -109,6 +133,12 @@
     <Compile Include="Model\Storage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddCatalog.resx">
+      <DependentUpon>AddCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddEmp.resx">
+      <DependentUpon>AddEmp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddPro.resx">
       <DependentUpon>AddPro.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +171,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
