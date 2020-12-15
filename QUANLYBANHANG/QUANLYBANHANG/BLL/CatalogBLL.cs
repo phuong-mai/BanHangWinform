@@ -1,4 +1,4 @@
-﻿using QUANLYBANHANG.DAL;
+using QUANLYBANHANG.DAL;
 using QUANLYBANHANG.Model;
 using System;
 using System.Collections.Generic;
