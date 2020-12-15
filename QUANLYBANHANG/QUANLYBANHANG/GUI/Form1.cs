@@ -17,18 +17,12 @@ namespace QUANLYBANHANG
     {
         private static CustomerBLL cus = new CustomerBLL();
         private static ProductBLL pro = new ProductBLL();
-        private static ComboBLL cbo = new ComboBLL();
-        private static CatalogBLL ca = new CatalogBLL();
-        private static EmployeeBLL emp = new EmployeeBLL();
         public Form1()
         {
             InitializeComponent();
             DataTable dt = new DataTable();
             tblCustomer.DataSource = cus.GetAll();
             tblProduct.DataSource = pro.GetAll();
-            tblCombo.DataSource = cbo.GetAll();
-            tblCatalog.DataSource = ca.GetAll();
-            tblStaff.DataSource = emp.GetAll();
             btnEditCus.Visible = false;
             btnDeleteCus.Visible = false;
             btnEditPro.Visible = false;
@@ -508,6 +502,35 @@ namespace QUANLYBANHANG
         private void lb2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DeleteInvoice_Click(object sender, EventArgs e)
+        {
+            InvoiceBLL.DeleteInvoice(tbIDInvoice.Text);
+            tblInvoice.DataSource = invoice.GetAll();
+        }
+
+        private void tblInvoice_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow row = tblInvoice.Rows[e.RowIndex];
+            Invoice Invoice = invoice.GetByID(row.Cells["id_invoice"].Value.ToString());
+            tblDetailInvoice.DataSource = invoice.GetDetailByID(Invoice.ID.ToString());
+            tbIDInvoice.Text = Invoice.ID.ToString();
+            tbdatecreate.Text = Invoice.createdDate.ToString();
+            tbnameCustomer.Text = Invoice.Invoice_Name.ToString();
+            tbTotalmoney.Text = Invoice.totalMoney.ToString();
+            btnEditCus.Visible = true;
+            btnDeleteCus.Visible = true;
+
+        }
+
+        private void tblgetPro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = tblgetPro.Rows[e.RowIndex];
+            Product product = pro.GetProByID(row.Cells["id_product"].Value.ToString());
+            tbgetidpro.Text = product.product_ID.ToString();
+            tbgetsl.Text = "1";
+            
         }
     }
 }

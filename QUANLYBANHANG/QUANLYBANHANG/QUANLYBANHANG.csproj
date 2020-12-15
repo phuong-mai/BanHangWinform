@@ -76,13 +76,21 @@
     <Compile Include="BLL\CatalogBLL.cs" />
     <Compile Include="BLL\ComboBLL.cs" />
     <Compile Include="BLL\CustomerBLL.cs" />
+<<<<<<< HEAD
     <Compile Include="BLL\EmployeeBLL.cs" />
+=======
+    <Compile Include="BLL\InvoiceBLL.cs" />
+>>>>>>> master
     <Compile Include="BLL\ProductBLL.cs" />
     <Compile Include="ConnectDB.cs" />
     <Compile Include="DAL\CatalogDAL.cs" />
     <Compile Include="DAL\ComboDAL.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
+<<<<<<< HEAD
     <Compile Include="DAL\EmployeeDAL.cs" />
+=======
+    <Compile Include="DAL\InvoiceDAL.cs" />
+>>>>>>> master
     <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="GUI\AddEmp.cs">
       <SubType>Form</SubType>

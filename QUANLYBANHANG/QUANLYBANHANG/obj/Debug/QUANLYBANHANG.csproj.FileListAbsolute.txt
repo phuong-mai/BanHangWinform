@@ -69,7 +69,6 @@ E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\bin\Debug\System.Numeric
 E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.csprojAssemblyReference.cache
 E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.Form1.resources
-E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.Form2.resources
 E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.Properties.Resources.resources
 E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.csproj.GenerateResource.cache
 E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.csproj.CoreCompileInputs.cache
@@ -127,7 +126,14 @@ D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.cs
 D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.csproj.CopyComplete
 D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.exe
 D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.pdb
+<<<<<<< HEAD
 D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.GUI.FormAddPro.resources
 D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.FormAddCus.resources
 D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.GUI.FormAddCatalog.resources
 D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.GUI.FormAddEmp.resources
+=======
+D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.GUI.FromAddPro.resources
+D:\Selling\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.FromAddCus.resources
+E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.GUI.FromAddPro.resources
+E:\myproject\BanHangWinform\QUANLYBANHANG\QUANLYBANHANG\obj\Debug\QUANLYBANHANG.FromAddCus.resources
+>>>>>>> master

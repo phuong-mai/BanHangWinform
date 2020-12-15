@@ -14,7 +14,7 @@ namespace QUANLYBANHANG.DAL
         public DataTable GetAll()
         {
             string query = "select p.ID, p.Product_Name, c.Catalog_Name as catalog, p.Amount, p.Price, p.Image_Name, p.Detail " +
-                "from Product p, Catalog c " +
+                "from Product as p, Catalog as c " +
                 "where p.Catalog_ID=c.ID";
             ConnectDB.DbConnection();
             SqlCommand command = new SqlCommand(query, ConnectDB.db);
