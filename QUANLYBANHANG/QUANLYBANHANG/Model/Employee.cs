@@ -19,5 +19,6 @@ namespace QUANLYBANHANG.Model
         public string address { get; set; }
         public Date join_date { get; set; }
         public string is_new { get; set; }
+        public int role_ID { get; set; }
     }
 }
