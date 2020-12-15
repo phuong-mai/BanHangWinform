@@ -42,8 +42,6 @@ namespace QUANLYBANHANG.DAL
                             firstName = dr["firstName"].ToString(),
                             lastName = dr["lastName"].ToString(),
                             gender = dr["gender"].ToString(),
-                            //birthDate = Convert.ToDateTime(dr["birthDate"].ToString()),
-                            //joinDate = Convert.ToDateTime(dr["joinDate"].ToString()),
                             address = dr["address"].ToString(),
                             phoneNumber = dr["phoneNumber"].ToString()
                         };
@@ -84,10 +82,7 @@ namespace QUANLYBANHANG.DAL
             cmd.Parameters.Add("@firstName", SqlDbType.NVarChar).Value = customer.firstName;
             cmd.Parameters.Add("@lastName", SqlDbType.NVarChar).Value = customer.lastName;
             cmd.Parameters.Add("@gender", SqlDbType.NVarChar).Value = customer.gender;
-            //cmd.Parameters.Add("@birthDate", SqlDbType.DateTime).Value = customer.birthDate;
             cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = customer.address;
-            //cmd.Parameters.Add("@joinDate", SqlDbType.DateTime).Value = customer.joinDate;
-            //cmd.Parameters.Add("@ID", SqlDbType.Int).Value = product.product_ID;
             cmd.ExecuteNonQuery();
         }
     }
